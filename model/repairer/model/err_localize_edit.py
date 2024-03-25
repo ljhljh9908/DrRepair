@@ -101,9 +101,7 @@ class ErrLocalizeEditModel(Model):
         self.text_seq_embedder2 = nn.LSTM(
             c_model.tok_embed.dim,
             c_model.tok_seq_embed.lstm_dim,
-            num_layers=1,
-            bidirectional=True,
-            dropout=c_model.dropout,
+            num_layers=1
         )
 
         self.code_seq_embedder1 = nn.LSTM(
